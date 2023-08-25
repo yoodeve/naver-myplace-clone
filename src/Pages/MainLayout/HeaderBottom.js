@@ -39,6 +39,7 @@ function HeaderBottom() {
         {menuList.map((e) => {
           return (
             <Menu
+            key={e.title}
               onClick={() => navigateMenu(e.url)}
               thisMenu={pathname === e.url || false}
             >
