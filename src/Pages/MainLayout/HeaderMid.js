@@ -1,14 +1,13 @@
 import styled from "@emotion/styled";
 import React from "react";
-import profilePic from "../../images/profile_icon.png";
 import ProfileLabel from "./ProfileLabel";
-import { ReactComponent as ShareIcon } from "../../images/svg/N_Share.svg";
+import { ReactComponent as ShareIcon } from "../../svg/N_Share.svg";
 
 function HeaderMid(props) {
   return (
     <HeaderMidContainer>
       <div className="mid-container">
-        <img src={profilePic} alt="" />
+        <img src="/images/profile_icon.png" alt="" />
         <div className="profile-wrap">
           <div>
             <span>한유정1457</span>

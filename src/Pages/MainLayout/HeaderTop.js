@@ -55,11 +55,12 @@ const HeaderTopContainer = styled.div`
     align-items: center;
     flex: 1 1;
     span {
-      margin-left: 3px;
+      margin-left: 5px;
       padding: 11px 2px 5px;
       display: inline-block;
       vertical-align: top;
       text-align: left;
+      font-size: 18px;
     }
   }
   .title-right-area {

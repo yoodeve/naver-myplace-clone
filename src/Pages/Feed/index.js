@@ -1,17 +1,13 @@
 import styled from '@emotion/styled';
 import React from 'react';
+import FeedComponent from './FeedComponent';
 
 function Feed(props) {
   return (
-    <FeedContainer>
-      피드
-    </FeedContainer>
+    <>
+      <FeedComponent />
+    </>
   );
 }
 
 export default Feed;
-
-const FeedContainer = styled.div`
-  display: flex;
-  height: 12000vh;
-`;
