@@ -2,16 +2,12 @@ import styled from "@emotion/styled";
 import React from "react";
 import { BsEmojiSmile, BsChevronRight } from "react-icons/bs";
 
-function ContentFooter(props) {
+function ContentFooter({reviewText, visitDate, shopname, foodType, shopLocation}) {
   return (
     <ContentFooterContainer>
       <div className="review-text">
         <p>
-          ❤️제주에서 먹었던 브런치 중에 최고였던 곳❤️ 영수증 고이고이
-          받아왔지만,,, 이제서야 쓰게 된 🥹🥹 먹고 싶어서 사진 찾아보다가 아!!
-          맞아!!! 영수증리뷰!!!하고 ㅎㅎㅎ 시저샐러드는 정말 최고고,,, 말뭐메뉴🩵
-          여기서 시저 안시키 면 큰일남‼️‼️‼️‼️ 파스타도 커피도 너무 맛있었고
-          식기나 매장 분위기 때문에 맛을 더 음미하면서 먹을 수 있었...
+          {reviewText}
         </p>
       </div>
       <div className="review-footer">
@@ -20,17 +16,17 @@ function ContentFooter(props) {
           <span>반응 남기기</span>
         </div>
         <div className="review-footer-right">
-          <span>8.5 토 방문</span>
+          <span>{visitDate} 토 방문</span>
         </div>
       </div>
       <div className="shop-name-area">
         <div className="shop-content-left">
           <div className="shop-name-content">
             <div className="content-top">
-              <span>청수미방</span> &nbsp; <BsChevronRight size="14px" />
+              <span>{shopname}</span> &nbsp; <BsChevronRight size="14px" />
             </div>
             <div className="content-bottom">
-              <p>양식/제주특별자치도 제주시 한경면</p>
+              <p>{foodType}/{shopLocation}</p>
             </div>
           </div>
         </div>

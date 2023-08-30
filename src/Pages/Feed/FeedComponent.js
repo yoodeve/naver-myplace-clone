@@ -5,9 +5,7 @@ import FeedContent from './FeedContent';
 
 function FeedComponent(props) {
   return (
-    <>
       <FeedContent />
-    </>
   );
 }
 

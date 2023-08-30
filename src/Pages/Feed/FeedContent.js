@@ -4,13 +4,13 @@ import ContentHeader from "./ContentHeader";
 import ContentImage from "./ContentImage";
 import ContentFooter from "./ContentFooter";
 
-function FeedContent(props) {
+function FeedContent({nickname, review, follower, reviewText, visitDate, shopname, foodType, shopLocation}) {
   return (
     <FeedContainer>
       <FeedContentWrap>
-        <ContentHeader />
+        <ContentHeader nickname={nickname} review={review} follower={follower} />
         <ContentImage />
-        <ContentFooter />
+        <ContentFooter reviewText={reviewText} visitDate={visitDate} shopname={shopname} foodType={foodType} shopLocation={shopLocation} />
       </FeedContentWrap>
     </FeedContainer>
   );

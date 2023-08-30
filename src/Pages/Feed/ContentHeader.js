@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import React from "react";
 import { AiOutlineMore } from "react-icons/ai";
 
-function ContentHeader(props) {
+function ContentHeader({nickname, review, follower}) {
   return (
     <ContentHeaderS>
       <div className="content-header-right">
@@ -10,10 +10,10 @@ function ContentHeader(props) {
           <div />
         </div>
         <div className="prof-info-wrap">
-          <p className="nickname">라랄</p>
+          <p className="nickname">{nickname}</p>
           <div className="prof-info-area">
-            <span className="photo-count">사진리뷰:142</span>
-            <span className="follower-count">팔로워:22</span>
+            <span className="photo-count">사진리뷰:{review}</span>
+            <span className="follower-count">팔로워:{follower}</span>
           </div>
         </div>
       </div>
