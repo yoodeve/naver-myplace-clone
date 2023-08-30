@@ -14,7 +14,7 @@ function ContentFooter(props) {
           식기나 매장 분위기 때문에 맛을 더 음미하면서 먹을 수 있었...
         </p>
       </div>
-      <div class="review-footer">
+      <div className="review-footer">
         <div className="review-footer-left">
           <BsEmojiSmile fill="#424242" size="22px" />
           <span>반응 남기기</span>
@@ -23,9 +23,9 @@ function ContentFooter(props) {
           <span>8.5 토 방문</span>
         </div>
       </div>
-      <div class="shop-name-area">
+      <div className="shop-name-area">
         <div className="shop-content-left">
-          <div class="shop-name-content">
+          <div className="shop-name-content">
             <div className="content-top">
               <span>청수미방</span> &nbsp; <BsChevronRight size="14px" />
             </div>

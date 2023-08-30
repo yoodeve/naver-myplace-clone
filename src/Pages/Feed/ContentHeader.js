@@ -9,7 +9,7 @@ function ContentHeader(props) {
         <div className="prof-img-wrap">
           <div />
         </div>
-        <div class="prof-info-wrap">
+        <div className="prof-info-wrap">
           <p className="nickname">라랄</p>
           <div className="prof-info-area">
             <span className="photo-count">사진리뷰:142</span>
@@ -21,7 +21,7 @@ function ContentHeader(props) {
         <div className="follow-btn-wrap">
           <button>팔로우</button>
         </div>
-        <div class="more-btn-wrap">
+        <div className="more-btn-wrap">
           <button>
             <AiOutlineMore size="1.2rem" />
           </button>

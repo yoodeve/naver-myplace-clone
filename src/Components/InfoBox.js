@@ -1,24 +1,21 @@
 import styled from "@emotion/styled";
 import React from "react";
 
-function InfoBox(props) {
+function InfoBox({ title, subtitle, gradient, imgSrc }) {
   return (
     <InfoLayout>
-      <InfoContainer>
+      <InfoContainer gradient={gradient}>
         <div className="flag-wrapper">
-          <svg viewBox="0 0 19 20" class="EjpFk4" aria-hidden="true">
+          <svg viewBox="0 0 19 20" className="EjpFk4" aria-hidden="true">
             <ellipse fill="#30A2B4" cx="7" cy="18" rx="7" ry="2"></ellipse>
             <path fill="#E6E6E0" d="M5 0H7V18H5z"></path>
             <path fill="#DB6E6E" d="M19 5.722L7 9 7 2z"></path>
           </svg>
         </div>
         <InfoBoxContent>
-          <div className="text-area">
-            <span>영수증/카드내역 인증, 예약, 주문</span>한 <br /> 장소가 나의
-            기록이 됩니다.
-          </div>
-          <div class="sub-text">방문했던 곳을 한 눈에 모아보세요.</div>
-          <img src="/images/content-sub-image.png" alt="" />
+          <div className="text-area">{title}</div>
+          <div className="sub-text">{subtitle}</div>
+          <Img src={imgSrc} alt="" />
           <p>
             <button>리뷰 참여하기</button>
           </p>
@@ -31,6 +28,8 @@ function InfoBox(props) {
 export default InfoBox;
 
 const InfoLayout = styled.div`
+width: 100%;
+background-color: #f9f9f9;
   padding: 25px 20px;
 `;
 
@@ -41,7 +40,7 @@ const InfoContainer = styled.div`
   height: 440px;
   border-radius: 15px;
   padding: 34px 30px 40px;
-  background-image: linear-gradient(142deg, #55abab, #6fc2ac);
+  background-image: linear-gradient(${(props) => props.gradient});
   .flag-wrapper {
     display: block;
     width: 19px;
@@ -67,11 +66,6 @@ const InfoBoxContent = styled.div`
     font-size: 14px;
     font-weight: 300;
   }
-  img {
-    margin-top: 27px;
-    width: 235px;
-    height: 155px;
-  }
   p {
     margin-top: 22px;
     button {
@@ -85,4 +79,9 @@ const InfoBoxContent = styled.div`
       text-align: center;
     }
   }
+`;
+const Img = styled.img`
+  margin-top: 27px;
+  width: 235px;
+  height: 155px;
 `;

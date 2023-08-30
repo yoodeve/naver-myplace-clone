@@ -6,8 +6,6 @@ import FeedContent from './FeedContent';
 function FeedComponent(props) {
   return (
     <>
-      <FeedHeader />
-      <FeedSubHeader />
       <FeedContent />
     </>
   );

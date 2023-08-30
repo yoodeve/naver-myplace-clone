@@ -1,11 +1,17 @@
-import styled from '@emotion/styled';
-import React from 'react';
-import FeedComponent from './FeedComponent';
+import React from "react";
+import FeedHeader from "./FeedHeader";
+import FeedSubHeader from "./FeedSubHeader";
+import FeedContent from "./FeedContent";
 
 function Feed(props) {
   return (
     <>
-      <FeedComponent />
+      <FeedHeader />
+      <FeedSubHeader />
+      <FeedContent />
+      <FeedContent />
+      <FeedContent />
+      <FeedContent />
     </>
   );
 }

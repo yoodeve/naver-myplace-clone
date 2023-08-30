@@ -19,7 +19,7 @@ function FeedContent(props) {
 export default FeedContent;
 
 const FeedContainer = styled.li`
-  margin: 0 auto;
+  margin: 0 auto 20px;
   padding: 0 20px;
   width: 100%;
   max-width: 720px;

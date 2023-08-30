@@ -1,25 +1,35 @@
 import styled from "@emotion/styled";
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { MdOutlineGpsFixed } from "react-icons/md";
 
 function FeedHeader(props) {
+  const menuArray = [
+    <>전체</>,
+    <>팔로잉</>,
+    <>
+      <AiOutlinePlus />
+      관심지역
+    </>,
+  ];
+
+  const [index, setIndex] = useState(0);
+
+  const onClick = (i) => {
+    setIndex(i);
+  };
+
   return (
     <HeaderContainer>
       <HeaderContent>
         <HeaderLeft>
-          <div className="left-content-box">
-            <button>전체</button>
-          </div>
-          <div className="left-content-box">
-            <button>팔로잉</button>
-          </div>
-          <div className="left-content-box">
-            <button>
-              <AiOutlinePlus />
-              관심지역
+          {menuArray.map((e, i) => {
+            return <div className="left-content-box">
+            <button onClick={() => onClick(i)} className={index === i && "blue"}>
+              {e}
             </button>
           </div>
+          })}
         </HeaderLeft>
         <HeaderRight>
           <div className="right-content-box">
@@ -72,6 +82,11 @@ const HeaderLeft = styled.div`
       height: 42px;
       display: flex;
       align-items: center;
+      cursor: pointer;
+    }
+    .blue {
+      color: #fff !important;
+      background-image: linear-gradient(90deg, #2d8dee, #2da1ee) !important;
     }
   }
 `;
